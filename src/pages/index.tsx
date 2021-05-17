@@ -5,22 +5,22 @@ export default function Home() {
   return (
     <Flex align="center" justify="center" w="100vw" h="100vh">
       <Stack spacing="4" align="center" justify="center">
-        <Heading size="2xl" mb="8">
+        <Heading size="2xl" mb="8" w="100%" textAlign="center">
           Boilerplate NextJs e ChakraUi
         </Heading>
         <Text>Pra você nunca mais sofrer com CSS na vida!</Text>
 
-        <Flex>
+        <Flex flexDir={{ base: 'column', lg: 'row' }}>
           <Flex
             w="350px"
-            h="250px"
+            h={{ lg: '250px', base: 'fit-content' }}
             bg="gray.800"
             borderRadius="10"
             p="4"
-            mr="8"
+            mr={{ base: '0', lg: '8' }}
             mb="8"
           >
-            <Stack align="center" justify="center" spacing="8">
+            <Stack align="center" justify="center" spacing="8" w="100%">
               <Heading textAlign="center" size="lg">
                 Documentação do Nextjs
               </Heading>
@@ -29,8 +29,15 @@ export default function Home() {
               </Link>
             </Stack>
           </Flex>
-          <Flex w="350px" h="250px" bg="gray.800" borderRadius="10" p="4">
-            <Stack align="center" justify="center" spacing="8">
+
+          <Flex
+            w="350px"
+            h={{ lg: '250px', base: 'fit-content' }}
+            bg="gray.800"
+            borderRadius="10"
+            p="4"
+          >
+            <Stack align="center" justify="center" spacing="8" w="100%">
               <Heading textAlign="center" size="lg">
                 Documentação do ChakraUi
               </Heading>
